@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Store</title>
+</head>
+<body>
+    <h1>Welcome to My Store</h1>
+    <ul>
+        {% for product in products %}
+        <li>
+            <h2>{{ product.name }}</h2>
+            <img src="{{ product.image.url }}" alt="{{ product.name }} image">
+            <p>{{ product.description }}</p>
+            <a href="#">View Details</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
